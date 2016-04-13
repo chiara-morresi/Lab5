@@ -1,7 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RuzzleController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RuzzleController">
+   <top>
+      <Label text="Ruzzle" textFill="#f20404" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets bottom="15.0" top="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <HBox spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="CENTER" hgap="10.0" prefHeight="250.0" prefWidth="250.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="1" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="75.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="75.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="75.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="3" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="140.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.rowIndex="3" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13d613" height="55.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="55.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="lbl00" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl10" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl20" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl30" textFill="#fffefe" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl01" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl11" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl21" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl31" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl02" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl12" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl22" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl32" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl03" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl13" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl23" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="lbl33" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </GridPane>
+            <VBox spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#doGenera" prefHeight="27.0" prefWidth="155.0" text="Genera" />
+                  <ListView fx:id="listParole" editable="true" onMouseClicked="#doFind" prefHeight="218.0" prefWidth="155.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </center>
 </BorderPane>

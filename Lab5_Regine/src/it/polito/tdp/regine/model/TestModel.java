@@ -6,7 +6,7 @@ public class TestModel {
 		
 		RegineModel model = new RegineModel();
 		
-		int[][] sol = model.ricorsione();
+		int[][] sol = model.ricorsione().get(0);
 		
 		for(int i=0; i<8; i++)
 		{
@@ -20,7 +20,21 @@ public class TestModel {
 			
 		}
 
+		System.out.println("\n");
 
+		sol = model.ricorsione().get(1);
+		
+		for(int i=0; i<8; i++)
+		{
+			
+			for(int j=0; j<8; j++)
+			{
+				System.out.print(sol[i][j] + " ");
+			}
+			
+			System.out.print("\n");
+			
+		}
 	}
 
 }

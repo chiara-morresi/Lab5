@@ -5,20 +5,24 @@ import java.util.List;
 
 public class RegineModel {
 	
+	int[][] finale = new int[8][8];
 	int[] regine = new int[8];
 	List<int[][]> soluzioni = new ArrayList<int[][]>();
 
-	public int[][] ricorsione() {
+	public List<int[][]> ricorsione() {
 		Scacchiera sc = new Scacchiera();
-		return ricorsione(sc, 0);
+		soluzioni.clear();
+		ricorsione(sc, 0);
+		return soluzioni;
 		
 	}
 	
-	public int[][] ricorsione(Scacchiera sc, int level) {
-		
+	public void ricorsione(Scacchiera sc, int level) {
 		
 		if(level==8) {
-			return sc.getScacchiera();
+			finale = sc.getScacchiera();
+			soluzioni.add(finale);
+			return;
 		}
 		
 		for(int j=0; j<8; j++) {
@@ -26,14 +30,10 @@ public class RegineModel {
 			if(filtro(sc, level, j)) {
 				sc.setCasella(level, j);
 				regine[level] = j;
-				int[][] temp = ricorsione(sc, level+1);
-				if(temp!=null)
-					return temp;
+				ricorsione(sc, level+1);
 				sc.delete(level, j);
 			}
 		}
-		
-		return null;
 		
 	}
 	

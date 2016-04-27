@@ -21,7 +21,7 @@ public class RegineModel {
 		
 		if(level==8) {
 			finale = sc.getScacchiera();
-			soluzioni.add(finale);
+			soluzioni.add(cloneMatrix(finale));
 			return;
 		}
 		
@@ -57,6 +57,14 @@ public class RegineModel {
 		
 		
 		return true;
+	}
+	
+	
+	public static int[][] cloneMatrix(int[][] inputMatrix) {
+	     int [][] myInt = new int[inputMatrix.length][];
+	     for(int i = 0; i < inputMatrix.length; i++)
+	          myInt[i] = inputMatrix[i].clone();
+	     return myInt;
 	}
 
 }

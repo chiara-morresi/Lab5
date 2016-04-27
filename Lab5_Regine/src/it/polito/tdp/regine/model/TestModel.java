@@ -1,40 +1,34 @@
 package it.polito.tdp.regine.model;
 
+import java.util.List;
+
 public class TestModel {
 
 	public static void main(String[] args) {
 		
 		RegineModel model = new RegineModel();
 		
-		int[][] sol = model.ricorsione().get(0);
+		List<int[][]> sol = model.ricorsione();
 		
-		for(int i=0; i<8; i++)
-		{
+		for(int k=0; k<sol.size(); k++) {
+			int[][] soluzione = sol.get(k);
 			
-			for(int j=0; j<8; j++)
+			for(int i=0; i<8; i++)
 			{
-				System.out.print(sol[i][j] + " ");
+				
+				for(int j=0; j<8; j++)
+				{
+					System.out.print(soluzione[i][j] + " ");
+				}
+				
+				System.out.print("\n");
+				
 			}
 			
-			System.out.print("\n");
-			
+			System.out.println("\n");
 		}
-
-		System.out.println("\n");
-
-		sol = model.ricorsione().get(1);
 		
-		for(int i=0; i<8; i++)
-		{
-			
-			for(int j=0; j<8; j++)
-			{
-				System.out.print(sol[i][j] + " ");
-			}
-			
-			System.out.print("\n");
-			
-		}
+		System.out.println(sol.size());
 	}
 
 }
